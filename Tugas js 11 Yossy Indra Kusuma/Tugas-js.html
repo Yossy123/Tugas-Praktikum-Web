@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pertambahan Angka</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+      }
+
+      input {
+        padding: 8px;
+        margin-bottom: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      span {
+        font-weight: bold;
+        color: #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <td>
+          <h2>Pertambahan Angka</h2>
+
+          <label for="angka1">Angka 1:</label>
+          <input
+            type="number"
+            id="angka1"
+            placeholder="Masukkan angka pertama"
+          />
+
+          <br />
+          <br />
+
+          <label for="angka2">Angka 2:</label>
+          <input type="number" id="angka2" placeholder="Masukkan angka kedua" />
+
+          <button onclick="tambah()">Hitung</button>
+
+          <p>Hasil: <span id="hasil"></span></p>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      function tambah() {
+        // Ambil nilai dari kedua input
+        let angka1 = document.getElementById("angka1").value;
+        let angka2 = document.getElementById("angka2").value;
+
+        // Ubah nilai menjadi angka (number)
+        angka1 = parseFloat(angka1);
+        angka2 = parseFloat(angka2);
+
+        // Lakukan pertambahan
+        let hasil = angka1 + angka2;
+
+        // Tampilkan hasil di elemen dengan id "hasil"
+        document.getElementById("hasil").innerText = hasil;
+      }
+    </script>
+  </body>
+</html>
